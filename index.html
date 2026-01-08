@@ -34,6 +34,34 @@ p {
   color: #555;
   line-height: 1.6;
 }
+    .service-item {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: serviceFade 0.6s ease forwards;
+}
+
+.service-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.service-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.service-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes serviceFade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
     .services h3 {
   margin-top: 15px;
   margin-bottom: 10px;
@@ -85,13 +113,13 @@ p {
     <p>حلاقة عصرية واحترافية</p>
 
     <div class="services">
-      <h3>الخدمات</h3>
-      <ul>
-        <li>حلاقة شعر</li>
-        <li>حلاقة ذقن</li>
-        <li>تنظيف البشرة</li>
-      </ul>
-    </div>
+  <h3>الخدمات</h3>
+  <ul>
+    <li class="service-item">حلاقة شعر</li>
+    <li class="service-item">حلاقة ذقن</li>
+    <li class="service-item">تنظيف البشرة</li>
+  </ul>
+</div>
 
     <div class="info">
       <p>⏰ 09:00 - 21:00</p>
